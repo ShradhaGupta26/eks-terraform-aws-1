@@ -43,6 +43,16 @@ resource "helm_release" "cluster_autoscaler" {
   }
 
   set {
+    name  = "image.repository"
+    value = var.image.repository
+  }
+
+  set {
+    name  = "image.tag"
+    value = var.image.tag
+  }
+
+  set {
     name  = "rbac.serviceAccount.name"
     value = var.service_account_name
   }

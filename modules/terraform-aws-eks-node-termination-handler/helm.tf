@@ -54,6 +54,16 @@ resource "helm_release" "spot_termination_handler" {
     }
   }
 
+  set {
+    name  = "image.repository"
+    value = var.image.repository
+  }
+
+  set {
+    name  = "image.tag"
+    value = var.image.tag
+  }
+
   values = [
     yamlencode(var.settings)
   ]

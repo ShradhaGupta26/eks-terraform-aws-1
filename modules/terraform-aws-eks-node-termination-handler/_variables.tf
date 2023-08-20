@@ -34,6 +34,18 @@ variable "create_namespace" {
   description = "Whether to create Kubernetes namespace with name defined by `namespace`."
 }
 
+variable "image.repository" {
+  type        = string
+  default     = "public.ecr.aws/aws-ec2/aws-node-termination-handler"
+  description = "ecr repo for aws-node termination handler"
+}
+
+variable "image.tag" {
+  type        = string
+  default     = "v1.20.0"
+  description = "ecr image version."
+}
+
 variable "namespace" {
   type        = string
   default     = "kube-system"

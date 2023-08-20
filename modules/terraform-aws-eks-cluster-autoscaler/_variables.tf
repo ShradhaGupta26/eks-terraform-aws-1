@@ -14,6 +14,18 @@ variable "aws_region" {
   description = "AWS region where secrets are stored."
 }
 
+variable "image.repository" {
+  type        = string
+  default     = "k8s.gcr.io/autoscaling/cluster-autoscaler"
+  description = "AWS region where secrets are stored."
+}
+
+variable "image.tag" {
+  type        = string
+  default     = "v1.26.2"
+  description = "AWS region where secrets are stored."
+}
+
 variable "cluster_identity_oidc_issuer" {
   type        = string
   description = "The OIDC Identity issuer for the cluster."

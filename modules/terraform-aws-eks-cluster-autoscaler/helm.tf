@@ -44,12 +44,12 @@ resource "helm_release" "cluster_autoscaler" {
 
   set {
     name  = "image.repository"
-    value = var.image.repository
+    value = var.image_repository
   }
 
   set {
     name  = "image.tag"
-    value = var.image.tag
+    value = var.image_tag
   }
 
   set {

@@ -9,6 +9,18 @@ variable "cluster_name" {
   description = "The name of the cluster."
 }
 
+variable "image_repository" {
+  type        = string
+  default     = "public.ecr.aws/eks/aws-alb-ingress-controller:"
+  description = "AWS region where secrets are stored."
+}
+
+variable "image_tag" {
+  type        = string
+  default     = "v2.4.7-linux_arm64"
+  description = "AWS region where secrets are stored."
+}
+
 variable "cluster_identity_oidc_issuer" {
   type        = string
   description = "The OIDC Identity issuer for the cluster."

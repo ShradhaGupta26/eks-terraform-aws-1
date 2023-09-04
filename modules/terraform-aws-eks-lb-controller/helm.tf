@@ -13,6 +13,16 @@ resource "helm_release" "lb_controller" {
   }
 
   set {
+    name  = "image.repository"
+    value = var.image_repository
+  }
+
+  set {
+    name  = "image.tag"
+    value = var.image_tag
+  }
+
+  set {
     name  = "rbac.create"
     value = "true"
   }

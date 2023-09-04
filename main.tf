@@ -183,3 +183,4 @@ resource "aws_security_group_rule" "cluster" {
   from_port         = each.value.from_port
   to_port           = each.value.to_port
   type              = each.value
+}

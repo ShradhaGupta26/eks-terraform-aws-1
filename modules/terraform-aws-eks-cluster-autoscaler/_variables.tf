@@ -16,13 +16,13 @@ variable "aws_region" {
 
 variable "image_repository" {
   type        = string
-  default     = "k8s.gcr.io/autoscaling/cluster-autoscaler"
+  default     = "registry.k8s.io/autoscaling/cluster-autoscaler-arm64"
   description = "AWS region where secrets are stored."
 }
 
 variable "image_tag" {
   type        = string
-  default     = "v1.26.2"
+  default     = "v1.27.3"
   description = "AWS region where secrets are stored."
 }
 

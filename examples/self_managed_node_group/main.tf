@@ -374,6 +374,7 @@ resource "aws_kms_key" "eks" {
   tags = local.tags
 }
 
+
 data "aws_ami" "eks_default" {
   most_recent = true
   owners      = ["amazon"]
@@ -390,9 +391,10 @@ data "aws_ami" "eks_default_bottlerocket" {
 
   filter {
     name   = "name"
-    values = ["bottlerocket-aws-k8s-${local.cluster_version}-x86_64-*"]
+    values = ["bottlerocket-aws-k8s-${local.cluster_version}-aarch64-*"]
   }
 }
+
 
 resource "tls_private_key" "this" {
   algorithm = "RSA"
